@@ -1,14 +1,19 @@
-file="~/passwd.md"
+file="passwd.md"
 import random
 import time
 import string
-l=int(input("passwd lenght:"))
-chars=[]
-for x in range(0,l):
-    chars.insert(l,random.choice(string.ascii_letters + string.digits + string.punctuation))
-for y in chars:
-    print(y,end="")
-    #write passwd to home dir
-    #f=open(file,"a")
-    #f.write(y)
-time.sleep(5)
+
+print("[n]ew password, [l]ist all passwords, [c]hange an existing password\n")
+print("your choice:")
+if input("") == "n":
+    pwd_length = int(input("password length:"))
+    p = []
+    for x in range(0,l):
+        p.insert(l,random.choice(string.ascii_letters + string.digits + string.punctuation))
+        print(p,"\n")
+        print("Do you want to save the password to a file? (Y/N, [custom/file/path])")
+        if input("Your Choice:") == "Y" or "y":
+            print("")#####
+            
+
+        
